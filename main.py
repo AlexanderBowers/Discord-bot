@@ -6,7 +6,7 @@ import random
 
 client = discord.Client()
 
-sad_words = ["sad", "depressed", "unhappy", "angry", "miserable", "depressing"]
+member_words = ["erik", "lob", "broomee", "broomeme"]
 
 starter_encouragements = ["Cheer up!", "Hang in there.", "You are a good person!"]
 
@@ -30,8 +30,9 @@ async def on_message(message):
     if msg.startswith('$inspire'):
         quote = get_quote()
         await message.channel.send(quote)
-
-    if any(word in msg for word in sad_words):
-        await message.channel.send(random.choice(starter_encouragements))
+    if any(word in msg for word in member_words):
+        emoji = ':'+ word +':'
+        await message.channel.send(emoji)
+        
         
 client.run(os.getenv('TOKEN'))
