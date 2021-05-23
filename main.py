@@ -1,8 +1,9 @@
-import discord 
+import discord
 import os
 import requests
 import json
 import random
+from discord.utils import get
 
 client = discord.Client()
 
@@ -30,9 +31,12 @@ async def on_message(message):
     if msg.startswith('$inspire'):
         quote = get_quote()
         await message.channel.send(quote)
-    if any(word in msg for word in member_words):
-        emoji = ':'+ word +':'
-        await message.channel.send(emoji)
+    # if any(word in msg for word in member_words):
+    #     emoji = ':'+ word +':'
+    #     await message.channel.send(emoji)
+    if 'erik' in message.content:
+        emoji = get(bot.get_all_emojis(), name='erik')
+        await bot.add_reaction(message, emoji)
         
         
 client.run(os.getenv('TOKEN'))
