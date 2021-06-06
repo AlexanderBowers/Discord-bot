@@ -30,7 +30,7 @@ async def on_message(message):
     
     if msg.startswith('$inspire'):
         quote = get_quote()
-        await message.channel.send(quote)
+        await message.channel.send("<:erik:845394606249213992>")
     # if any(word in msg for word in member_words):
     #     emoji = ':'+ word +':'
     #     await message.channel.send(emoji)
