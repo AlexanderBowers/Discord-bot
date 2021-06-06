@@ -35,11 +35,13 @@ async def on_message(message):
     #     emoji = ':'+ word +':'
     #     await message.channel.send(emoji)
     if 'erik' in message.content:
-        await message.channel.send("<:erik:845394606249213992>")
-    if 'broomee' in message.content:
-        await message.channel.send("<:broomee:845394578550030386>")
+        await message.add_reaction("<:erik:845394606249213992>")
+
+    if 'broomee' or 'broomeme' in message.content:
+        await message.add_reaction("<:broomee:845394578550030386>")
+        
     if 'lob' in message.content:
-        await message.channel.send("<:lob:845394588214624316>")
+        await message.add_reaction("<:lob:845394588214624316>")
         
         
 client.run(os.getenv('TOKEN'))
