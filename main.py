@@ -35,8 +35,9 @@ async def on_message(message):
     #     emoji = ':'+ word +':'
     #     await message.channel.send(emoji)
     if 'erik' in message.content:
-        emoji = get(bot.get_all_emojis(), name='erik')
-        await bot.add_reaction(message, emoji)
+        await message.channel.send("<:erik:845394606249213992>")
+    if 'broomee' in message.content:
+        await message.channel.send("<:broomee:845394578550030386>")
         
         
 client.run(os.getenv('TOKEN'))
