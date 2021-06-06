@@ -38,6 +38,8 @@ async def on_message(message):
         await message.channel.send("<:erik:845394606249213992>")
     if 'broomee' in message.content:
         await message.channel.send("<:broomee:845394578550030386>")
+    if 'lob' in message.content:
+        await message.channel.send("<:lob:845394588214624316>")
         
         
 client.run(os.getenv('TOKEN'))
