@@ -26,13 +26,13 @@ async def on_message(message):
         return
 
     if 'erik' in message.content:
-        await message.add_reaction("<:erik:845394606249213992>")
+        await message.add_reaction("<:just_erik_things:454520448655294474>")
 
     if 'broomee' in message.content or 'broomeme' in message.content:
-        await message.add_reaction("<:broomee:845394578550030386>")
+        await message.add_reaction("<:just_broomeme_things:845394578550030386>")
         
     if 'lob' in message.content:
-        await message.add_reaction("<:lob:850893095923220530>")
+        await message.add_reaction("<:just_lob_things:850893095923220530>")
         
         
 client.run(os.getenv('TOKEN'))
