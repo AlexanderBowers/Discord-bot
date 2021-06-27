@@ -1,7 +1,5 @@
 import discord
 import os
-import requests
-import json
 from discord.utils import get
 
 client = discord.Client()
