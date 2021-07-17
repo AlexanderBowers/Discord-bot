@@ -29,4 +29,8 @@ async def on_message(message):
         guide = 'https://runescape.wiki/w/Revolution/Bars#Revolution++_bars'
         await message.channel.send(guide)
 
+    if 'i died' in message.content:
+        response = 'git gud'
+        await message.channel.send(response)
+
 client.run(os.getenv('TOKEN'))
