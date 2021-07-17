@@ -20,6 +20,9 @@ async def on_message(message):
         
     if 'lob' in message.content:
         await message.add_reaction("<:just_lob_things:464553024308772895>")
-        
-        
+
+    if message.content == '!raksha guide':
+        guide = 'https://www.youtube.com/watch?v=6LROlMZmC3w'
+        await message.channel.send(guide)
+
 client.run(os.getenv('TOKEN'))
