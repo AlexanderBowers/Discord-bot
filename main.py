@@ -24,5 +24,9 @@ async def on_message(message):
     if message.content == '!raksha guide':
         guide = 'https://www.youtube.com/watch?v=6LROlMZmC3w'
         await message.channel.send(guide)
+    
+    if message.content == '!revo':
+        guide = 'https://runescape.wiki/w/Revolution/Bars#Revolution++_bars'
+        await message.channel.send(guide)
 
 client.run(os.getenv('TOKEN'))
