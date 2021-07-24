@@ -29,6 +29,10 @@ async def on_message(message):
         link = 'https://runescape.wiki/w/Quests'
         await message.channel.send(link)
     
+    if message.content == '!comp':
+        link = 'https://runescape.wiki/w/Completionist_Cape_(achievement)'
+        await message.channel.send(link)
+    
     if message.content == '!revo':
         guide = 'https://runescape.wiki/w/Revolution/Bars#Revolution++_bars'
         await message.channel.send(guide)
