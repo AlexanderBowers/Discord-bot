@@ -28,6 +28,10 @@ async def on_message(message):
     if message.content == '!revo':
         guide = 'https://runescape.wiki/w/Revolution/Bars#Revolution++_bars'
         await message.channel.send(guide)
+    
+    if message.content == '@Mod Clouds | Delthorn':
+        ping = "<:pingsock:412246888088338437>"
+        await message.channel.send(ping)
 
     if 'i died' in message.content:
         response = 'git gud'
