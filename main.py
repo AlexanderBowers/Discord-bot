@@ -30,7 +30,7 @@ async def on_message(message):
         await message.channel.send(guide)
     
     if message.content == '@Mod Clouds | Delthorn':
-        ping = "<:pingsock:412246888088338437>"
+        ping = "<:ping:868547282574929930>"
         await message.channel.send(ping)
 
     if 'i died' in message.content:
