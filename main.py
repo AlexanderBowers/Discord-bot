@@ -25,6 +25,10 @@ async def on_message(message):
         guide = 'https://www.youtube.com/watch?v=6LROlMZmC3w'
         await message.channel.send(guide)
     
+    if message.content == '!quests':
+        link = 'https://runescape.wiki/w/Quests'
+        await message.channel.send(link)
+    
     if message.content == '!revo':
         guide = 'https://runescape.wiki/w/Revolution/Bars#Revolution++_bars'
         await message.channel.send(guide)
