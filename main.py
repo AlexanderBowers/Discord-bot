@@ -33,7 +33,7 @@ async def on_message(message):
         guide = 'https://runescape.wiki/w/Revolution/Bars#Revolution++_bars'
         await message.channel.send(guide)
     
-    if message.content == '@Mod Clouds | Delthorn':
+    if message.content == '<@261773632609452033>':
         ping = "<:ping:868547282574929930>"
         await message.channel.send(ping)
 
