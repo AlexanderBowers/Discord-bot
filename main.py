@@ -18,7 +18,7 @@ async def on_message(message):
     if 'broomee' in message.content or 'broomeme' in message.content:
         await message.add_reaction("<:just_broomeme_things:619182175488704512>")
         
-    if 'lob' in message.content:
+    if ' lob ' in message.content:
         await message.add_reaction("<:just_lob_things:464553024308772895>")
 
     if message.content == '!raksha guide':
