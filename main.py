@@ -44,5 +44,9 @@ async def on_message(message):
     if 'i died' in message.content:
         response = 'git gud'
         await message.channel.send(response)
+    
+    if message.content == '@oddments':
+        response = 'thank you, erik'
+        await message.channel.send(response)
 
 client.run(os.getenv('TOKEN'))
