@@ -12,7 +12,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if 'erik' in message.content:
+    if 'erik' in message.content or 'turoths' in message.content:
         await message.add_reaction("<:just_erik_things:454520448655294474>")
 
     if 'broomee' in message.content or 'broomeme' in message.content:
