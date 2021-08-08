@@ -23,6 +23,10 @@ async def on_message(message):
     
     if 'mqc' in message.content:
         await message.add_reaction("<:mqc:871139619125727242>")
+    
+    if 'oddments' in message.content:
+        response = 'thank you, erik'
+        await message.channel.send(response)
 
     if message.content == '!raksha guide':
         guide = 'https://www.youtube.com/watch?v=6LROlMZmC3w'
