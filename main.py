@@ -12,7 +12,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if 'erik ' in message.content or 'turoths' in message.content:
+    if 'erik ' in message.content or 'turoths' in message.content or 'dailies' in message.content:
         await message.add_reaction("<:just_erik_things:454520448655294474>")
 
     if 'broomee' in message.content or 'broomeme' in message.content:
@@ -55,5 +55,8 @@ async def on_message(message):
     if message.content == '@oddments':
         response = 'thank you, erik'
         await message.channel.send(response)
+    
+    if client.user.mentioned_in(message):
+        await message.channel.send('thank you, erik')
 
 client.run(os.getenv('TOKEN'))
