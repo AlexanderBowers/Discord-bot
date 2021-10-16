@@ -62,5 +62,9 @@ async def on_message(message):
     if message.content == 'bot, get roles @theBot':
         role = message.guild.get_role
         await message.channel.send(role)
-
+    
+    guild_id = message.guild_id
+    guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
+    role = discord.utils.get(guild.roles, name='oddments')
+    
 client.run(os.getenv('TOKEN'))
