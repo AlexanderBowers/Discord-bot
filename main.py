@@ -20,6 +20,10 @@ async def on_message(message):
     if message.content == 'bot, get role_id':
         await message.channel.send(role.id)
 
+    if '789675055754772481' in message.content:
+        response = 'thank you, erik'
+        await message.channel.send(response)
+
 
     if 'erik' in message.content or 'turoths' in message.content or 'dailies' in message.content:
         await message.add_reaction("<:just_erik_things:454520448655294474>")
