@@ -24,7 +24,6 @@ async def on_message(message):
         response = 'thank you, erik'
         await message.channel.send(response)
 
-
     if 'erik' in message.content or 'turoths' in message.content or 'dailies' in message.content:
         await message.add_reaction("<:just_erik_things:454520448655294474>")
 
@@ -36,10 +35,6 @@ async def on_message(message):
     
     if 'mqc' in message.content:
         await message.add_reaction("<:mqc:871139619125727242>")
-    
-    if 'oddments' in message.content:
-        response = 'thank you, erik'
-        await message.channel.send(response)
 
     if message.content == '!raksha guide':
         guide = 'https://www.youtube.com/watch?v=6LROlMZmC3w'
@@ -56,21 +51,14 @@ async def on_message(message):
     if message.content == '!revo':
         guide = 'https://runescape.wiki/w/Revolution/Bars#Revolution++_bars'
         await message.channel.send(guide)
-    
-    if message.content == '<@261773632609452033>':
-        ping = "<:ping:868547282574929930>"
-        await message.channel.send(ping)
 
     if 'i died' in message.content:
         response = 'git gud'
         await message.channel.send(response)
     
-    if message.content == '@oddments':
-        response = 'thank you, erik'
-        await message.channel.send(response)
-    
     if client.user.mentioned_in(message):
-        await message.channel.send('thank you, erik')
+        ping = "<:ping:868547282574929930>"
+        await message.channel.send(ping)
     
    
 
