@@ -9,6 +9,11 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+
+    guild_id = message.guild_id
+    guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
+    role = discord.utils.get(guild.roles, name='oddments')
+
     if message.author == client.user:
         return
 
@@ -63,8 +68,10 @@ async def on_message(message):
         role = message.guild.get_role
         await message.channel.send(role)
     
-    guild_id = message.guild_id
-    guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
-    role = discord.utils.get(guild.roles, name='oddments')
+    if role in message.content:
+        response = 'thank you, erik'
+        await message.channel.send(response)
     
+   
+
 client.run(os.getenv('TOKEN'))
