@@ -9,13 +9,17 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    
+    if message.author == client.user:
+        return
 
-    guild_id = message.guild_id
+    guild_id = message.guild.id
     guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
     role = discord.utils.get(guild.roles, name='oddments')
 
-    if message.author == client.user:
-        return
+    if message.content == 'bot, get role_id':
+        await message.channel.send(role.id)
+
 
     if 'erik' in message.content or 'turoths' in message.content or 'dailies' in message.content:
         await message.add_reaction("<:just_erik_things:454520448655294474>")
@@ -63,14 +67,6 @@ async def on_message(message):
     
     if client.user.mentioned_in(message):
         await message.channel.send('thank you, erik')
-
-    if message.content == 'bot, get roles @theBot':
-        role = message.guild.get_role
-        await message.channel.send(role)
-    
-    if role in message.content:
-        response = 'thank you, erik'
-        await message.channel.send(response)
     
    
 
