@@ -24,7 +24,7 @@ async def on_message(message):
         response = 'thank you, erik'
         await message.channel.send(response)
 
-    if 'erik' in message.content or 'turoths' in message.content or 'dailies' in message.content:
+    if 'erik' in message.content or 'turoths' in message.content or 'dailies' in message.content or 'hm hm' in message.content or 'hmh' in message.content:
         await message.add_reaction("<:just_erik_things:454520448655294474>")
 
     if 'broomee' in message.content or 'broomeme' in message.content:
