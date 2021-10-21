@@ -15,25 +15,17 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    guild_id = message.guild.id
-    guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
-    role = discord.utils.get(guild.roles, name='oddments')
-
-    if message.content == 'bot, get role_id':
-        await message.channel.send(role.id)
-
     if '789675055754772481' in message.content:
         response = 'thank you, erik'
         await message.channel.send(response)
 
-    
     if any(phrase in message.content.lower() for phrase in erik_pings):
         await message.add_reaction("<:just_erik_things:454520448655294474>")
 
     if 'broomee' in message.content or 'broomeme' in message.content:
         await message.add_reaction("<:just_broomeme_things:619182175488704512>")
         
-    if ' lob ' in message.content:
+    if 'lob' in message.content:
         await message.add_reaction("<:just_lob_things:464553024308772895>")
     
     if 'mqc' in message.content:
@@ -63,6 +55,4 @@ async def on_message(message):
         ping = "<:ping:868547282574929930>"
         await message.channel.send(ping)
     
-   
-
 client.run(os.getenv('TOKEN'))
