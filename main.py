@@ -3,6 +3,8 @@ import os
 
 client = discord.Client()
 
+erik_pings = ['erik', 'turoths', 'dailies', 'hm hm', 'hmh']
+
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
@@ -24,7 +26,8 @@ async def on_message(message):
         response = 'thank you, erik'
         await message.channel.send(response)
 
-    if 'erik' in message.content or 'turoths' in message.content or 'dailies' in message.content or 'hm hm' in message.content or 'hmh' in message.content:
+    
+    if any(phrase in message.content.lower() for phrase in erik_pings):
         await message.add_reaction("<:just_erik_things:454520448655294474>")
 
     if 'broomee' in message.content or 'broomeme' in message.content:
