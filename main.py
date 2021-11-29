@@ -16,8 +16,12 @@ async def on_message(message):
         return
 
     if '789675055754772481' in message.content:
-        response = 'thank you, erik'
-        await message.channel.send(response)
+        if message.author == 269670295680450560:
+            response = 'thank you, erik'
+            await message.channel.send(response)
+        else:
+            response = 'thank you, not erik'
+            await message.channel.send(response)
 
     if any(phrase in message.content.lower() for phrase in erik_pings):
         await message.add_reaction("<:just_erik_things:454520448655294474>")
