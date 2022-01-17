@@ -16,7 +16,10 @@ async def on_message(message):
         return
 
     if '789675055754772481' in message.content:
-        if message.author == 269670295680450560:
+        if 'lamps' in message.content or 'stars' in message.content:
+            await message.add_reaction("<:56btw:932449452915052544>")
+
+        if message.author == '269670295680450560':
             response = 'thank you, erik'
             await message.channel.send(response)
         else:
